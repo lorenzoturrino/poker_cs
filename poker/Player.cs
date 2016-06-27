@@ -36,6 +36,7 @@ namespace Poker
         public void SwitchCard(Card newCard, int cardPosition)
         {
             playerHand[cardPosition] = newCard;
+            updateScore();
         }
 
         private void updateScore()

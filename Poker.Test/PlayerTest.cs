@@ -63,6 +63,21 @@ namespace Poker.Test
             CollectionAssert.DoesNotContain(testPlayer.hand, cardOne);
         }
 
+        [TestCase]
+        public void SwitchCard_ComputeScore()
+        {
+            Player testPlayer = new Poker.Player();
+            Card cardOne = new Card(1, 1);
+            Card cardTwo = new Card(2, 1);
+            testPlayer.DealCard(cardOne);
+            testPlayer.DealCard(cardOne);
+            testPlayer.DealCard(cardOne);
+            testPlayer.DealCard(cardTwo);
+            testPlayer.DealCard(cardTwo);
+            testPlayer.SwitchCard(cardOne, 3);
+            Assert.AreEqual(914, testPlayer.score);
+        }
+
 
 
     }
