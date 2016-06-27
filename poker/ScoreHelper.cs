@@ -28,11 +28,8 @@ namespace Poker
             {
                 return false;
             }
-            List<Card> orderedCards = cards.OrderBy(card => card.value).ToList();
-            bool isAscending = cards
-                .Select((card, index) => card.value + index)
-                .All(value => value == cards[0].value);
-            if(isAscending)
+            
+            if(cards.areContiguous())
             {
                 return true;
             }
@@ -47,6 +44,14 @@ namespace Poker
         private static bool allSameSeed(this List<Card> cards)
         {
             return cards.All(card => card.suit == cards[0].suit);
+        }
+
+        private static bool areContiguous(this List<Card> cards)
+        {
+            List<Card> sortedCards = sortCards(cards);
+            return sortedCards
+                .Select((card, index) => card.value - index)
+                .All(value => value == sortedCards[0].value);
         }
     }
 }
