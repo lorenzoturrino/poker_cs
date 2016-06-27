@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Poker
 {
-    class Player
+    public class Player
     {
+        private List<Card> playerHand;
+
+        public Player()
+        {
+            playerHand = new List<Card>();
+        }
+
+        public List<Card> hand
+        {
+            get { return playerHand; }
+        }
     }
 }
