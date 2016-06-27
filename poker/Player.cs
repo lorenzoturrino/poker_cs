@@ -24,5 +24,10 @@ namespace Poker
         {
             playerHand.Add(newCard);
         }
+
+        public void switchCard(Card newCard, int cardPosition)
+        {
+            playerHand[cardPosition] = newCard;
+        }
     }
 }
