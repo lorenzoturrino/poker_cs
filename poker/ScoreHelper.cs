@@ -24,8 +24,7 @@ namespace Poker
 
         private static bool IsStraightflush(this List<Card> cards)
         {
-            bool differentSeeds = cards.Any(card => card.suit != cards[0].suit);
-            if (differentSeeds)
+            if (!cards.allSameSeed())
             {
                 return false;
             }
@@ -45,6 +44,9 @@ namespace Poker
             return cards.OrderBy(card => card.value).ToList();
         }
 
-
+        private static bool allSameSeed(this List<Card> cards)
+        {
+            return cards.All(card => card.suit == cards[0].suit);
+        }
     }
 }
