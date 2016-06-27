@@ -25,7 +25,7 @@ namespace Poker.Test
         {
             Player testPlayer = new Poker.Player();
             Card cardOne = new Card(1, 1);
-            testPlayer.dealCard(cardOne);
+            testPlayer.DealCard(cardOne);
             Assert.Contains(cardOne, testPlayer.hand);
 
         }
@@ -36,8 +36,8 @@ namespace Poker.Test
             Player testPlayer = new Poker.Player();
             Card cardOne = new Card(1, 1);
             Card cardTwo = new Card(2, 0);
-            testPlayer.dealCard(cardOne);
-            testPlayer.switchCard(cardTwo, 0);
+            testPlayer.DealCard(cardOne);
+            testPlayer.SwitchCard(cardTwo, 0);
             Assert.AreEqual(cardTwo, testPlayer.hand[0]);
             CollectionAssert.DoesNotContain(testPlayer.hand, cardOne);
         }

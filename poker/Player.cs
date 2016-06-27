@@ -20,12 +20,12 @@ namespace Poker
             get { return playerHand; }
         }
 
-        public void dealCard(Card newCard)
+        public void DealCard(Card newCard)
         {
             playerHand.Add(newCard);
         }
 
-        public void switchCard(Card newCard, int cardPosition)
+        public void SwitchCard(Card newCard, int cardPosition)
         {
             playerHand[cardPosition] = newCard;
         }
