@@ -41,20 +41,23 @@ namespace Poker
 
         private void updateScore()
         {
-            if ( playerHand.Count < 5 )
+            handScore = ScoreHelper.calculateScore(playerHand);
+        }
+    }
+
+    public static class ScoreHelper
+    {
+        
+        public static int calculateScore(List<Card> cards)
+        {
+            if (cards.Count < 5)
             {
-                handScore = -1;
+                return -1;
             }
             else
             {
-                handScore = 914;
+                return 914;
             }
-
-            foreach ( Card card in playerHand)
-            {
-             
-            }
-           
         }
     }
 }
