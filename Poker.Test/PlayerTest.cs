@@ -20,6 +20,17 @@ namespace Poker.Test
             Assert.IsEmpty(testPlayer.hand);
         }
 
+        [TestCase]
+        public void DealCard_FillsHand()
+        {
+            Player testPlayer = new Poker.Player();
+            Card cardOne = new Card(1, 1);
+            testPlayer.dealCard(cardOne);
+            Assert.Contains(cardOne, testPlayer.hand);
+
+        }
+
+
 
     }
 }

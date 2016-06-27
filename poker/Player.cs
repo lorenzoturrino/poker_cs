@@ -19,5 +19,10 @@ namespace Poker
         {
             get { return playerHand; }
         }
+
+        public void dealCard(Card newCard)
+        {
+            playerHand.Add(newCard);
+        }
     }
 }
