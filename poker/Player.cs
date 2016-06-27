@@ -44,20 +44,4 @@ namespace Poker
             handScore = ScoreHelper.calculateScore(playerHand);
         }
     }
-
-    public static class ScoreHelper
-    {
-        
-        public static int calculateScore(List<Card> cards)
-        {
-            if (cards.Count < 5)
-            {
-                return -1;
-            }
-            else
-            {
-                return 914;
-            }
-        }
-    }
 }

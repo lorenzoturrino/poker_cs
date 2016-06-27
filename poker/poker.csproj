@@ -43,6 +43,7 @@
     <Compile Include="CardDealer.cs" />
     <Compile Include="GameOfPoker.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="ScoreHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
