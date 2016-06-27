@@ -9,15 +9,22 @@ namespace Poker
     public class Player
     {
         private List<Card> playerHand;
+        private int handScore;
 
         public Player()
         {
             playerHand = new List<Card>();
+            handScore = calculateScore();
         }
 
         public List<Card> hand
         {
             get { return playerHand; }
+        }
+
+        public int score
+        {
+            get { return handScore; }
         }
 
         public void DealCard(Card newCard)
@@ -28,6 +35,20 @@ namespace Poker
         public void SwitchCard(Card newCard, int cardPosition)
         {
             playerHand[cardPosition] = newCard;
+        }
+
+        private int calculateScore()
+        {
+            if ( playerHand.Count < 5 )
+            {
+                return -1;
+            }
+
+            foreach ( Card card in playerHand)
+            {
+             
+            }
+            return 0;
         }
     }
 }

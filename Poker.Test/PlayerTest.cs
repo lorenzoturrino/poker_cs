@@ -21,6 +21,13 @@ namespace Poker.Test
         }
 
         [TestCase]
+        public void Hand_StartingValueIsNoScore()
+        {
+            Player testPlayer = new Poker.Player();
+            Assert.AreEqual(-1, testPlayer.score);
+        }
+
+        [TestCase]
         public void DealCard_FillsHand()
         {
             Player testPlayer = new Poker.Player();
