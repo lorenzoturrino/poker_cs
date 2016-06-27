@@ -14,9 +14,12 @@ namespace Poker.Test
     class PlayerTest
     {
         [TestCase]
-        public void Hand_CorrectValue()
+        public void Hand_StartsEmpty()
         {
-
+            Player testPlayer = new Poker.Player();
+            Assert.IsEmpty(testPlayer.hand);
         }
+
+
     }
 }
