@@ -39,5 +39,12 @@ namespace Poker
             }
             return false;
         }
+
+        private static List<Card> sortCards(List<Card> cards)
+        {
+            return cards.OrderBy(card => card.value).ToList();
+        }
+
+
     }
 }
