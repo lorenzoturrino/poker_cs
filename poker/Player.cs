@@ -41,7 +41,7 @@ namespace Poker
 
         private void updateScore()
         {
-            handScore = ScoreHelper.calculateScore(playerHand);
+            handScore = ScoreHelper.CalculateScore(playerHand);
         }
     }
 }

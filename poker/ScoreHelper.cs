@@ -8,7 +8,7 @@ namespace Poker
 {
     public static class ScoreHelper
     {
-        public static int calculateScore(List<Card> cards)
+        public static int CalculateScore(List<Card> cards)
         {
             if (cards.Count < 5)
             {
